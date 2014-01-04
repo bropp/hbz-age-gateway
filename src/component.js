@@ -8,10 +8,10 @@
 
 
 // TODO: Make sure to rename the module.
-var component = angular.module('namespace.component-name', [
+var component = angular.module('hbz.age-gate', [
 ]);
 
-component.directive('blink', function() {
+component.directive('hbzAgeGate', function() {
   return {
     restrict: 'E,A',
     transclude: true,
