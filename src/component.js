@@ -1,41 +1,82 @@
 /**
- * This is an example directive taken from a tutorial at
- * http://www.adobe.com/devnet/html5/articles/angularjs-directives-and-the-computer-science-of-javascript.edu.html
+ * This directive for an age verification gateway.
  */
 
-/* global angular */
+/* globals angular, moment */
 'use strict';
 
+var component = angular.module('hbz.age-gate', ['ngCookies']);
 
-// TODO: Make sure to rename the module.
-var component = angular.module('hbz.age-gate', [
-]);
+component.directive('hbzAgeGate', function($cookieStore) {
+    return {
+        restrict: 'E',
+        transclude: true,
+        templateUrl: 'ageGate.tmpl',
+        //scope: {
+        //    isValidated: false
+        //},
+        link: function (scope) {
+            var indexToDropBox = function (index) {
+                return { id: index, value: index };
+            };
 
-component.directive('hbzAgeGate', function() {
-  return {
-    restrict: 'E,A',
-    transclude: true,
-    templateUrl: 'blink.tmpl',
-    scope: {},
-    link: function(scope, element) {
-      var marquee = element.find('marquee');
-      var input = element.find('input');
+            Array.range = function(from, to, step){
+                if(typeof from === 'number'){
+                    var A = [from];
+                    step = typeof step === 'number'? Math.abs(step):1;
+                    if(from> to){
+                        while((from -= step) >= to) {
+                            A.push(from);
+                        }
+                    }
+                    else {
+                        while((from += step) <= to) {
+                            A.push(from);
+                        }
+                    }
+                    return A;
+                }
+            };
 
-      // edit mode boolean controls the visibilty of the blink and input
-      scope.editMode = false;
+            scope.days = Array.range(1,31,1).map(indexToDropBox);
+            scope.months = Array.range(1,12,1).map(indexToDropBox);
+            scope.years = Array.range(1900,moment().year(),1).map(indexToDropBox);
 
-      input.bind('blur', function() {
-        scope.$apply(function() {
-          scope.editMode = false;
-          marquee.text(input.val());
-        });
-      });
+            function dateDiff (birthDate) {
+                if (birthDate.isValid()) {
+                    var todayDate = moment();
+                    return todayDate.diff(birthDate, 'years');
+                }
 
-      // called when the marquee tag is clicked
-      scope.edit = function() {
-        scope.editMode = true;
-        input.val(marquee.text());
-      };
-    }
-  };
+                return undefined;
+            }
+
+            scope.validate = function (month, day, year) {
+                var lastValidated = $cookieStore.get('lastValidated');
+                if (typeof lastValidated !== 'undefined' && moment().diff(moment(lastValidated), 'days') < 30) {
+                    month = $cookieStore.get('month');
+                    day = $cookieStore.get('day');
+                    year = $cookieStore.get('year');
+                }
+
+                var age;
+                var birthDate = moment([year, month - 1, day]);
+                if (birthDate.isValid()) {
+                    age = dateDiff(birthDate);
+                }
+
+                if (typeof age !== 'undefined' && age >= 21) {
+                    $cookieStore.put('lastValidated', moment().toISOString());
+                    $cookieStore.put('month', month);
+                    $cookieStore.put('day', day);
+                    $cookieStore.put('year', year);
+                    scope.isValidated = true;
+                } else {
+                    scope.isValidated = false;
+                }
+            };
+
+            scope.validate(null,null,null);
+        }
+    };
 });

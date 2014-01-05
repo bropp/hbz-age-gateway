@@ -3,29 +3,26 @@
 
 var expect = chai.expect;
 
-describe('blink', function() {
-  var elm, scope;
+describe('hbz-age-gate', function() {
+    var elm, scope;
 
-  // load the code
-  beforeEach(module('namespace.component-name'));
+    // load the code
+    beforeEach(module('hbz.age-gate'));
 
-  // load the template
-  beforeEach(module('blink.tmpl'));
+    // load the template
+    beforeEach(module('ageGate.tmpl'));
 
-  beforeEach(inject(function($rootScope, $compile) {
-    // we might move this tpl into an html file as well...
-    elm = angular.element('<blink>Hello world</blink>');
+    beforeEach(inject(function($rootScope, $compile) {
+        elm = angular.element('<hbz-age-gate></hbz-age-gate>');
 
-    scope = $rootScope;
-    $compile(elm)(scope);
-    scope.$digest();
-  }));
+        scope = $rootScope;
+        $compile(elm)(scope);
+        scope.$digest();
+    }));
 
+    it('should have select elements', inject(function() {
+        var selectElements = elm.find('select');
 
-  it('should create a marquee element', inject(function() {
-    var marquee = elm.find('marquee');
-
-    expect(marquee).to.have.length(1);
-    expect(marquee.eq(0).text()).to.equal('Hello world');
-  }));
+        expect(selectElements).to.have.length(3);
+    }));
 });

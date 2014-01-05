@@ -2,10 +2,8 @@
 'use strict';
 
 var app = angular.module('ngApp', [
-  'namespace.component-name'
+  'hbz.age-gate'
 ]);
 
 app.controller('demoController', function($scope) {
-  $scope.text1 = 'Bling bring bring';
-  $scope.text2 = 'Hello world';
 });

@@ -1,0 +1,15 @@
+<div class="hbz-age-gate" ng-hide="isValidated">
+    <span class="hbz-age-gate-inner">
+        <img src="logo.png"/>
+        <ul class="list-unstyled">
+            <li>
+                Day<select class="hbz-age-gate-dropbox" ng-model="selectedDay" ng-options="day as day.value for day in days"></select>
+                Month<select class="hbz-age-gate-dropbox" ng-model="selectedMonth" ng-options="month as month.value for month in months"></select>
+                Year<select class="hbz-age-gate-dropbox" ng-model="selectedYear" ng-options="year as year.value for year in years"></select>
+            </li>
+            <li>
+                <button class="hbz-age-gate-submit" ng-click="validate(selectedMonth.value, selectedDay.value, selectedYear.value)">Submit</button>
+            </li>
+        </ul>
+    </span>
+</div>
