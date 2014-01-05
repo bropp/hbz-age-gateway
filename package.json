@@ -5,12 +5,12 @@
   },
   "name": "hbz-age-gate",
   "description": "Age verification gateway component.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "MIT",
-  "homepage": "https://github.com/hatboyzero/hbz-age-gate",
+  "homepage": "https://github.com/hatboyzero/hbz-age-gateway",
   "repository": {
     "type": "git",
-    "url": "git://github.com/hatboyzero/hbz-age-gate.git"
+    "url": "git://github.com/hatboyzero/hbz-age-gateway.git"
   },
   "keywords": [
     "angular",
