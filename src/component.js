@@ -10,12 +10,13 @@ var component = angular.module('hbz.age-gate', ['ngCookies']);
 component.directive('hbzAgeGate', function($cookieStore) {
     return {
         restrict: 'E',
-        transclude: true,
-        templateUrl: 'ageGate.tmpl',
-        //scope: {
-        //    isValidated: false
-        //},
-        link: function (scope) {
+        template: '<div ng-include src="getView()"></div>',
+        controller: function ($scope, $element, $attrs) {
+
+            $scope.getView = function() {
+                return $attrs.template;
+            };
+
             var indexToDropBox = function (index) {
                 return { id: index, value: index };
             };
@@ -38,9 +39,9 @@ component.directive('hbzAgeGate', function($cookieStore) {
                 }
             };
 
-            scope.days = Array.range(1,31,1).map(indexToDropBox);
-            scope.months = Array.range(1,12,1).map(indexToDropBox);
-            scope.years = Array.range(1900,moment().year(),1).map(indexToDropBox);
+            $scope.days = Array.range(1,31,1).map(indexToDropBox);
+            $scope.months = Array.range(1,12,1).map(indexToDropBox);
+            $scope.years = Array.range(1900,moment().year(),1).map(indexToDropBox);
 
             function dateDiff (birthDate) {
                 if (birthDate.isValid()) {
@@ -51,7 +52,7 @@ component.directive('hbzAgeGate', function($cookieStore) {
                 return undefined;
             }
 
-            scope.validate = function (month, day, year) {
+            $scope.validate = function (month, day, year) {
                 var lastValidated = $cookieStore.get('lastValidated');
                 if (typeof lastValidated !== 'undefined' && moment().diff(moment(lastValidated), 'days') < 30) {
                     month = $cookieStore.get('month');
@@ -70,13 +71,13 @@ component.directive('hbzAgeGate', function($cookieStore) {
                     $cookieStore.put('month', month);
                     $cookieStore.put('day', day);
                     $cookieStore.put('year', year);
-                    scope.isValidated = true;
+                    $scope.isValidated = true;
                 } else {
-                    scope.isValidated = false;
+                    $scope.isValidated = false;
                 }
             };
 
-            scope.validate(null,null,null);
+            $scope.validate(null,null,null);
         }
     };
 });

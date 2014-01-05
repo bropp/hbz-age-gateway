@@ -13,7 +13,7 @@ describe('hbz-age-gate', function() {
     beforeEach(module('ageGate.tmpl'));
 
     beforeEach(inject(function($rootScope, $compile) {
-        elm = angular.element('<hbz-age-gate></hbz-age-gate>');
+        elm = angular.element('<hbz-age-gate template="ageGate.tmpl"></hbz-age-gate>');
 
         scope = $rootScope;
         $compile(elm)(scope);
