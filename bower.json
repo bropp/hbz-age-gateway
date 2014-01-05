@@ -22,11 +22,12 @@
     "dependencies": {
         "angular": "~1.2.8",
         "angular-cookies": "~1.2.8",
-        "angular-mocks": "~1.2.8"
+        "angular-mocks": "~1.2.8",
+        "jquery": "~2.0.3",
+        "bootstrap": "~3.0.3",
+        "moment": "~2.5.0"
     },
     "devDependencies": {
         "chai": "~1.8.1",
-        "jquery": "~2.0.3",
-        "moment": "~2.5.0"
     }
 }
