@@ -6,7 +6,7 @@
 
     "name": "hbz-age-gate",
     "description": "Age verification gateway component.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "license": "MIT",
 
     "homepage": "https://github.com/hatboyzero/hbz-age-gateway",
@@ -19,6 +19,9 @@
         "demo",
         "test"
     ],
+
+    "main": "./src/component.js",
+
     "dependencies": {
         "angular": "~1.2.8",
         "angular-cookies": "~1.2.8",
