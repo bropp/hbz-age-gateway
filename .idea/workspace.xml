@@ -2,27 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da74096b-26d2-4559-94d5-c4314fd0f924" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/ageGate.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ageGate.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/angular-cookies.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/moment.js" />
-      <change type="DELETED" beforePath="C:\workspace\hbz-age-gate\demo\blink.tmpl" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\hbz-age-gate\src\blink.tmpl" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.jshintrc" afterPath="$PROJECT_DIR$/.jshintrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/logo.png" afterPath="$PROJECT_DIR$/demo/logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/ageGate.tmpl" afterPath="$PROJECT_DIR$/demo/ageGate.tmpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ageGate.tmpl" afterPath="$PROJECT_DIR$/src/ageGate.tmpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/angular-cookies.js" afterPath="$PROJECT_DIR$/demo/angular-cookies.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/bootstrap.css" afterPath="$PROJECT_DIR$/demo/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/bootstrap.js" afterPath="$PROJECT_DIR$/demo/bootstrap.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/component.css" afterPath="$PROJECT_DIR$/demo/component.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component.css" afterPath="$PROJECT_DIR$/src/component.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/component.js" afterPath="$PROJECT_DIR$/demo/component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component.js" afterPath="$PROJECT_DIR$/src/component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/componentSpec.js" afterPath="$PROJECT_DIR$/test/unit/componentSpec.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/index.html" afterPath="$PROJECT_DIR$/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/karma-unit.conf.js" afterPath="$PROJECT_DIR$/karma-unit.conf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/jquery.js" afterPath="$PROJECT_DIR$/demo/jquery.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/main.js" afterPath="$PROJECT_DIR$/demo/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/moment.js" afterPath="$PROJECT_DIR$/demo/moment.js" />
     </list>
     <ignored path="hbz-age-gate.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,10 +88,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="component.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="component.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/component.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="21" selection-start="172" selection-end="172" vertical-scroll-proportion="0.2915952" vertical-offset="0" max-vertical-offset="680">
+            <state line="9" column="0" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="31" selection-start="158" selection-end="158" vertical-scroll-proportion="0.11663808" vertical-offset="0" max-vertical-offset="583">
               <folding />
             </state>
           </provider>
@@ -120,7 +124,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/demo/main.js" />
         <option value="$PROJECT_DIR$/demo/component.css" />
         <option value="$PROJECT_DIR$/demo/blink.tmpl" />
         <option value="$PROJECT_DIR$/.jshintrc" />
@@ -136,6 +139,7 @@
         <option value="$PROJECT_DIR$/demo/index.html" />
         <option value="$PROJECT_DIR$/src/ageGate.tmpl" />
         <option value="$PROJECT_DIR$/src/component.css" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -369,11 +373,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="22" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3026" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/karma-unit.conf.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="85" column="30" selection-start="2040" selection-end="2040" vertical-scroll-proportion="0.0" vertical-offset="1173" max-vertical-offset="1768">
@@ -474,7 +473,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/component.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="21" selection-start="172" selection-end="172" vertical-scroll-proportion="0.2915952" vertical-offset="0" max-vertical-offset="680">
+        <state line="9" column="0" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="31" selection-start="158" selection-end="158" vertical-scroll-proportion="0.11663808" vertical-offset="0" max-vertical-offset="583">
           <folding />
         </state>
       </provider>
